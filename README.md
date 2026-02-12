@@ -58,7 +58,7 @@ clawsouls-skill/
 ├── scripts/
 │   └── clawsouls.sh  # CLI wrapper script
 ├── package.json      # Dependencies (clawsouls CLI)
-├── LICENSE.md        # Apache 2.0
+├── LICENSE        # Apache 2.0
 └── README.md         # This file
 ```
 
@@ -70,4 +70,4 @@ clawsouls-skill/
 
 ## License
 
-Apache 2.0 — see [LICENSE.md](LICENSE.md).
+Apache 2.0 — see [LICENSE](LICENSE).
