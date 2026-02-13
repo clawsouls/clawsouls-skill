@@ -23,7 +23,7 @@ If not installed, install globally:
 npm install -g clawsouls
 ```
 
-Current version: **v0.2.0**
+Current version: **v0.2.3**
 
 ## Commands
 
@@ -80,6 +80,15 @@ npx clawsouls init my-soul
 
 Scaffolds a new soul directory with clawsoul.json, SOUL.md, IDENTITY.md, AGENTS.md, HEARTBEAT.md, README.md.
 
+### Validate a Soul
+
+```bash
+npx clawsouls validate ./my-soul/
+npx clawsouls check ./my-soul/   # alias
+```
+
+Validates against the spec: schema, required files, security scan. Also runs automatically before publish.
+
 ### Publish a Soul
 
 ```bash
@@ -87,7 +96,7 @@ export CLAWSOULS_TOKEN=<token>
 npx clawsouls publish ./my-soul/
 ```
 
-Publishes to `username/soul-name` namespace automatically. Requires authentication token.
+Publishes to `username/soul-name` namespace automatically. Requires authentication token. Runs validation automatically before publishing — blocks on failure.
 
 ### Login / Get Token
 
