@@ -7,6 +7,8 @@ description: Manage AI agent personas (Souls) for OpenClaw. Use when the user wa
 
 Manage Soul packages that define an AI agent's personality, behavior, and identity.
 
+Souls use `owner/name` namespacing (e.g., `clawsouls/brad`, `TomLeeLive/my-soul`).
+
 ## Prerequisites
 
 Ensure `clawsouls` CLI is available:
@@ -21,18 +23,20 @@ If not installed, install globally:
 npm install -g clawsouls
 ```
 
+Current version: **v0.2.0**
+
 ## Commands
 
 ### Install a Soul
 
 ```bash
-npx clawsouls install <owner/name>
-npx clawsouls install <owner/name> --force  # overwrite existing
+npx clawsouls install clawsouls/brad
+npx clawsouls install clawsouls/brad --force  # overwrite existing
 ```
 
-30 souls available. Browse all at https://clawsouls.ai
+30+ souls available. Browse all at https://clawsouls.ai
 
-**Categories:**
+**Official souls** (owner: `clawsouls`):
 - **Development:** code-reviewer, coding-tutor, debug-detective, api-architect, ml-engineer, sysadmin-sage, devops-veteran, gamedev-mentor, prompt-engineer
 - **Writing & Content:** tech-writer, storyteller, scifi-writer, copywriter, content-creator
 - **Professional:** data-analyst, project-manager, legal-advisor, startup-founder
@@ -45,12 +49,12 @@ npx clawsouls install <owner/name> --force  # overwrite existing
 ### Activate a Soul
 
 ```bash
-npx clawsouls use <name>
+npx clawsouls use clawsouls/brad
 ```
 
 - Automatically backs up current workspace files (SOUL.md, IDENTITY.md, AGENTS.md, HEARTBEAT.md, STYLE.md, examples/)
 - Never overwrites USER.md, MEMORY.md, or TOOLS.md
-- Requires session restart to take effect
+- Requires gateway restart to take effect
 
 ### Restore Previous Soul
 
@@ -66,41 +70,56 @@ Reverts to the most recent backup created by `use`.
 npx clawsouls list
 ```
 
+Shows installed souls in `owner/name` format.
+
+### Create a New Soul
+
+```bash
+npx clawsouls init my-soul
+```
+
+Scaffolds a new soul directory with clawsoul.json, SOUL.md, IDENTITY.md, AGENTS.md, HEARTBEAT.md, README.md.
+
 ### Publish a Soul
 
 ```bash
-npx clawsouls publish <dir>
+export CLAWSOULS_TOKEN=<token>
+npx clawsouls publish ./my-soul/
 ```
 
-Publishes a soul package directory to the ClawSouls registry. Requires authentication (see `login`).
+Publishes to `username/soul-name` namespace automatically. Requires authentication token.
 
-### Login
+### Login / Get Token
 
 ```bash
 npx clawsouls login
 ```
 
-Get instructions for authenticating with the ClawSouls registry. Required before `publish`.
+Instructions to get API token: Sign in at https://clawsouls.ai → Dashboard → Generate API Token.
 
 ## Workflow
 
 ### Installing & Switching Personas
 
 1. **Browse** — Check available souls at https://clawsouls.ai or suggest from the categorized list above
-2. **Install** — `npx clawsouls install <name>`
-3. **Activate** — `npx clawsouls use <name>`
-4. **Inform user** — Remind them to restart the OpenClaw session
+2. **Install** — `npx clawsouls install clawsouls/brad`
+3. **Activate** — `npx clawsouls use clawsouls/brad`
+4. **Restart** — Run `openclaw gateway restart` to apply the new persona
 5. **Restore** — If they want to go back, `npx clawsouls restore`
 
 ### Publishing a Soul
 
-1. **Login** — `npx clawsouls login` (follow auth instructions)
-2. **Prepare** — Ensure soul directory has required files (SOUL.md, IDENTITY.md, clawsoul.json)
-3. **Publish** — `npx clawsouls publish <dir>`
+1. **Login** — `npx clawsouls login` → get token from dashboard
+2. **Set token** — `export CLAWSOULS_TOKEN=<token>`
+3. **Create** — `npx clawsouls init my-soul` → edit files
+4. **Publish** — `npx clawsouls publish ./my-soul/`
+5. **Manage** — Dashboard at https://clawsouls.ai/dashboard (delete, view downloads)
 
 ## Important Notes
 
-- After `use`, always remind the user to restart their OpenClaw session
+- After `use`, always remind the user to run `openclaw gateway restart`
 - The `use` command creates automatic backups — data loss is unlikely
 - Souls may include STYLE.md and examples/ for enhanced persona customization
+- Published souls appear at `https://clawsouls.ai/souls/owner/name`
+- Users can leave reviews (1-5 stars) on any soul they don't own
 - For custom registry (local testing), set env: `CLAWSOULS_CDN=/path/to/souls`
