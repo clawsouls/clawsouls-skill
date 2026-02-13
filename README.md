@@ -57,12 +57,18 @@ clawsouls login                        # Get auth token instructions
 The `validate` (alias: `check`) command verifies a soul package is spec-compliant before publishing:
 
 ```bash
-clawsouls validate ./my-soul/
+clawsouls validate ./my-soul/              # validate against latest spec (v0.2)
+clawsouls validate ./my-soul/ --spec 0.1   # validate against spec v0.1
+clawsouls validate ./my-soul/ --spec 0.2   # validate against spec v0.2 explicitly
 ```
+
+**Spec versions:**
+- **v0.1** — Core fields (name, version, description, author, license, tags, category, files)
+- **v0.2** — Adds STYLE.md, examples (good/bad), modes, interpolation, skills
 
 **Checks performed:**
 - ✓ `clawsoul.json` exists and is valid JSON
-- ✓ Schema validation (name, version, description, author, license, tags, category, files)
+- ✓ Schema validation against the selected spec version
 - ✓ Required files present (`SOUL.md`)
 - ✓ Optional files noted (`IDENTITY.md`, `AGENTS.md`, `HEARTBEAT.md`, `STYLE.md`, `README.md`)
 - ✓ Content checks (empty files, short descriptions, missing tags)
