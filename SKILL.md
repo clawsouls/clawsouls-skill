@@ -26,8 +26,8 @@ npm install -g clawsouls
 ### Install a Soul
 
 ```bash
-npx clawsouls install <name>
-npx clawsouls install <name> --force  # overwrite existing
+npx clawsouls install <owner/name>
+npx clawsouls install <owner/name> --force  # overwrite existing
 ```
 
 30 souls available. Browse all at https://clawsouls.ai
