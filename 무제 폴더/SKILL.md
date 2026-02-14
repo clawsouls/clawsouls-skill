@@ -23,7 +23,7 @@ If not installed, install globally:
 npm install -g clawsouls
 ```
 
-Current version: **v0.2.5**
+Current version: **v0.2.3**
 
 ## Commands
 
@@ -31,23 +31,19 @@ Current version: **v0.2.5**
 
 ```bash
 npx clawsouls install clawsouls/brad
-npx clawsouls install clawsouls/brad --force       # overwrite existing
-npx clawsouls install clawsouls/brad@0.1.0         # specific version
+npx clawsouls install clawsouls/brad --force  # overwrite existing
 ```
 
-78+ souls available. Browse all at https://clawsouls.ai
+30+ souls available. Browse all at https://clawsouls.ai
 
 **Official souls** (owner: `clawsouls`):
-- **Development:** code-reviewer, coding-tutor, debug-detective, api-architect, ml-engineer, sysadmin-sage, devops-veteran, gamedev-mentor, prompt-engineer, frontend-dev, backend-dev, mobile-dev, cloud-architect, database-admin, qa-engineer
-- **Writing & Content:** tech-writer, storyteller, scifi-writer, copywriter, content-creator, journalist, poet, screenwriter, academic-writer
-- **Professional:** data-analyst, project-manager, legal-advisor, startup-founder, hr-manager, marketing-strategist, sales-coach, product-manager
-- **Education:** math-tutor, philosophy-prof, mentor-coach, science-tutor, history-prof, language-teacher, economics-tutor
-- **Creative:** music-producer, ux-designer, chef-master, graphic-designer, video-editor, podcast-host, dungeon-master, game-designer
-- **Lifestyle:** personal-assistant, fitness-coach, travel-guide, life-coach, meditation-guide, nutrition-advisor, productivity-guru, financial-planner
-- **Science:** research-scientist, data-scientist
+- **Development:** code-reviewer, coding-tutor, debug-detective, api-architect, ml-engineer, sysadmin-sage, devops-veteran, gamedev-mentor, prompt-engineer
+- **Writing & Content:** tech-writer, storyteller, scifi-writer, copywriter, content-creator
+- **Professional:** data-analyst, project-manager, legal-advisor, startup-founder
+- **Education:** math-tutor, philosophy-prof, mentor-coach
+- **Creative:** music-producer, ux-designer, chef-master
+- **Lifestyle:** personal-assistant, fitness-coach, travel-guide
 - **Security:** security-auditor
-- **MBTI:** mbti-intj, mbti-intp, mbti-entj, mbti-entp, mbti-infj, mbti-infp, mbti-enfj, mbti-enfp, mbti-istj, mbti-isfj, mbti-estj, mbti-esfj, mbti-istp, mbti-isfp, mbti-estp, mbti-esfp
-- **Special:** karpathy-coder, korean-translator
 - **General:** brad, minimalist
 
 ### Activate a Soul
