@@ -47,7 +47,7 @@ npx clawsouls install clawsouls/brad@0.1.0         # specific version
 - **Science:** research-scientist, data-scientist
 - **Security:** security-auditor
 - **MBTI:** mbti-intj, mbti-intp, mbti-entj, mbti-entp, mbti-infj, mbti-infp, mbti-enfj, mbti-enfp, mbti-istj, mbti-isfj, mbti-estj, mbti-esfj, mbti-istp, mbti-isfp, mbti-estp, mbti-esfp
-- **Special:** karpathy-coder, korean-translator
+- **Special:** surgical-coder (inspired by Karpathy's CLAUDE.md), korean-translator
 - **General:** brad, minimalist
 
 ### Activate a Soul
@@ -136,3 +136,6 @@ Instructions to get API token: Sign in at https://clawsouls.ai → Dashboard →
 - Published souls appear at `https://clawsouls.ai/souls/owner/name`
 - Users can leave reviews (1-5 stars) on any soul they don't own
 - For custom registry (local testing), set env: `CLAWSOULS_CDN=/path/to/souls`
+- Website available in 5 languages: English, Korean, Japanese, Chinese, Spanish (e.g., `clawsouls.ai/ko/souls/...`)
+- Share any soul to your OpenClaw bot: the install command is included in the share text
+- Legal: [Privacy Policy](https://clawsouls.ai/en/privacy) · [Terms of Service](https://clawsouls.ai/en/terms)
