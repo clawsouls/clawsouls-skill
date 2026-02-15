@@ -67,7 +67,7 @@ clawsouls validate ./my-soul/ --spec 0.2   # validate against spec v0.2 explicit
 - **v0.2** — Adds STYLE.md, examples (good/bad), modes, interpolation, skills
 
 **Checks performed:**
-- ✓ `clawsoul.json` exists and is valid JSON
+- ✓ `soul.json` exists and is valid JSON
 - ✓ Schema validation against the selected spec version
 - ✓ Required files present (`SOUL.md`)
 - ✓ Optional files noted (`IDENTITY.md`, `AGENTS.md`, `HEARTBEAT.md`, `STYLE.md`, `README.md`)

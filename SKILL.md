@@ -82,7 +82,7 @@ Shows installed souls in `owner/name` format.
 npx clawsouls init my-soul
 ```
 
-Scaffolds a new soul directory with clawsoul.json, SOUL.md, IDENTITY.md, AGENTS.md, HEARTBEAT.md, README.md.
+Scaffolds a new soul directory with soul.json, SOUL.md, IDENTITY.md, AGENTS.md, HEARTBEAT.md, README.md.
 
 ### Validate a Soul
 
