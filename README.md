@@ -42,8 +42,8 @@ Once installed, your AI agent can:
 ## CLI Commands
 
 ```bash
-clawsouls install clawsouls/brad       # Install a soul
-clawsouls use clawsouls/brad           # Activate a soul
+clawsouls install clawsouls/surgical-coder       # Install a soul
+clawsouls use clawsouls/surgical-coder           # Activate a soul
 clawsouls list                         # List installed souls
 clawsouls restore                      # Revert to previous soul
 clawsouls init my-soul                 # Scaffold a new soul
@@ -82,7 +82,7 @@ Validation also runs automatically on `publish` — invalid packages are rejecte
 
 | Soul | Description |
 |------|-------------|
-| 🅱️ clawsouls/brad | Formal, project-focused development partner |
+| 🅱️ clawsouls/surgical-coder | Formal, project-focused development partner |
 | 🔧 clawsouls/devops-veteran | Battle-scarred infrastructure engineer |
 | 🎮 clawsouls/gamedev-mentor | Experienced game developer and mentor |
 | ⚡ clawsouls/minimalist | Extremely concise responses |
