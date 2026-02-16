@@ -23,7 +23,7 @@ If not installed, install globally:
 npm install -g clawsouls
 ```
 
-Current version: **v0.2.5**
+Current version: **v0.3.2**
 
 ## Commands
 
@@ -35,7 +35,7 @@ npx clawsouls install clawsouls/brad --force       # overwrite existing
 npx clawsouls install clawsouls/brad@0.1.0         # specific version
 ```
 
-78+ souls available. Browse all at https://clawsouls.ai
+79+ souls available. Browse all at https://clawsouls.ai
 
 **Official souls** (owner: `clawsouls`):
 - **Development:** code-reviewer, coding-tutor, debug-detective, api-architect, ml-engineer, sysadmin-sage, devops-veteran, gamedev-mentor, prompt-engineer, frontend-dev, backend-dev, mobile-dev, cloud-architect, database-admin, qa-engineer
@@ -47,7 +47,7 @@ npx clawsouls install clawsouls/brad@0.1.0         # specific version
 - **Science:** research-scientist, data-scientist
 - **Security:** security-auditor
 - **MBTI:** mbti-intj, mbti-intp, mbti-entj, mbti-entp, mbti-infj, mbti-infp, mbti-enfj, mbti-enfp, mbti-istj, mbti-isfj, mbti-estj, mbti-esfj, mbti-istp, mbti-isfp, mbti-estp, mbti-esfp
-- **Special:** surgical-coder (inspired by Karpathy's CLAUDE.md), korean-translator
+- **Special:** surgical-coder, korean-translator
 - **General:** brad, minimalist
 
 ### Activate a Soul
@@ -82,7 +82,7 @@ Shows installed souls in `owner/name` format.
 npx clawsouls init my-soul
 ```
 
-Scaffolds a new soul directory with soul.json, SOUL.md, IDENTITY.md, AGENTS.md, HEARTBEAT.md, README.md.
+Scaffolds a new soul directory with `soul.json`, SOUL.md, IDENTITY.md, AGENTS.md, HEARTBEAT.md, README.md.
 
 ### Validate a Soul
 
@@ -138,4 +138,6 @@ Instructions to get API token: Sign in at https://clawsouls.ai → Dashboard →
 - For custom registry (local testing), set env: `CLAWSOULS_CDN=/path/to/souls`
 - Website available in 5 languages: English, Korean, Japanese, Chinese, Spanish (e.g., `clawsouls.ai/ko/souls/...`)
 - Share any soul to your OpenClaw bot: the install command is included in the share text
+- **The Soul Thesis** — Read the manifesto: https://clawsouls.ai/en/manifesto
+- **Research paper** — "Soul-Driven Interaction Design": https://doi.org/10.5281/zenodo.18661656
 - Legal: [Privacy Policy](https://clawsouls.ai/en/privacy) · [Terms of Service](https://clawsouls.ai/en/terms)
