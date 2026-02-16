@@ -7,7 +7,7 @@ description: Manage AI agent personas (Souls) for OpenClaw. Use when the user wa
 
 Manage Soul packages that define an AI agent's personality, behavior, and identity.
 
-Souls use `owner/name` namespacing (e.g., `clawsouls/brad`, `TomLeeLive/my-soul`).
+Souls use `owner/name` namespacing (e.g., `clawsouls/surgical-coder`, `TomLeeLive/my-soul`).
 
 ## Prerequisites
 
@@ -30,9 +30,9 @@ Current version: **v0.3.2**
 ### Install a Soul
 
 ```bash
-npx clawsouls install clawsouls/brad
-npx clawsouls install clawsouls/brad --force       # overwrite existing
-npx clawsouls install clawsouls/brad@0.1.0         # specific version
+npx clawsouls install clawsouls/surgical-coder
+npx clawsouls install clawsouls/surgical-coder --force       # overwrite existing
+npx clawsouls install clawsouls/surgical-coder@0.1.0         # specific version
 ```
 
 79+ souls available. Browse all at https://clawsouls.ai
@@ -53,7 +53,7 @@ npx clawsouls install clawsouls/brad@0.1.0         # specific version
 ### Activate a Soul
 
 ```bash
-npx clawsouls use clawsouls/brad
+npx clawsouls use clawsouls/surgical-coder
 ```
 
 - Automatically backs up current workspace files (SOUL.md, IDENTITY.md, AGENTS.md, HEARTBEAT.md, STYLE.md, examples/)
@@ -115,8 +115,8 @@ Instructions to get API token: Sign in at https://clawsouls.ai → Dashboard →
 ### Installing & Switching Personas
 
 1. **Browse** — Check available souls at https://clawsouls.ai or suggest from the categorized list above
-2. **Install** — `npx clawsouls install clawsouls/brad`
-3. **Activate** — `npx clawsouls use clawsouls/brad`
+2. **Install** — `npx clawsouls install clawsouls/surgical-coder`
+3. **Activate** — `npx clawsouls use clawsouls/surgical-coder`
 4. **Restart** — Run `openclaw gateway restart` to apply the new persona
 5. **Restore** — If they want to go back, `npx clawsouls restore`
 
