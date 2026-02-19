@@ -106,8 +106,9 @@ npx clawsouls scan                  # alias
 
 SoulScan checks active soul files for:
 - **Integrity**: SHA-256 checksum comparison — detects tampering since last scan
-- **Security**: 26 pattern checks (prompt injection, code execution, XSS, data exfiltration, privilege escalation, social engineering)
+- **Security**: 53 pattern checks (prompt injection, code execution, XSS, data exfiltration, privilege escalation, social engineering, harmful content, secret detection)
 - **Quality**: File structure, content length, schema validation
+- **Persona Consistency**: Cross-validates name/tone across SOUL.md, IDENTITY.md, soul.json
 
 **Cron usage** — periodic tamper detection:
 ```bash
