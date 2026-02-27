@@ -93,7 +93,9 @@ npx clawsouls export system-prompt       # generate a system prompt string
 
 Combines SOUL.md, IDENTITY.md, AGENTS.md, HEARTBEAT.md, STYLE.md into a single file. Useful for Claude Code, Cursor, Windsurf, and other tools that use a single config file.
 
-### Memory Sync (Phase 5)
+### Memory Sync (Pro/Team only)
+
+> ⚡ Requires Pro ($9/mo) or Team ($29/seat/mo) plan.
 
 ```bash
 npx clawsouls sync init          # setup GitHub repo + age encryption key
