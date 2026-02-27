@@ -23,7 +23,7 @@ If not installed, install globally:
 npm install -g clawsouls
 ```
 
-Current version: **v0.4.3**
+Current version: **v0.6.0**
 
 ## Commands
 
@@ -92,6 +92,47 @@ npx clawsouls export system-prompt       # generate a system prompt string
 ```
 
 Combines SOUL.md, IDENTITY.md, AGENTS.md, HEARTBEAT.md, STYLE.md into a single file. Useful for Claude Code, Cursor, Windsurf, and other tools that use a single config file.
+
+### Memory Sync (Phase 5)
+
+```bash
+npx clawsouls sync init          # setup GitHub repo + age encryption key
+npx clawsouls sync push          # encrypt & push workspace .md files
+npx clawsouls sync pull          # pull & decrypt from GitHub
+npx clawsouls sync status        # show sync status
+npx clawsouls sync export-key    # export age private key
+npx clawsouls sync import-key    # import age private key
+```
+
+Encrypts workspace memory files (MEMORY.md, memory/*.md) with age encryption and syncs to a private GitHub repo. End-to-end encrypted — even GitHub can't read the contents.
+
+### Version Management (Phase 8)
+
+```bash
+npx clawsouls version bump patch    # 1.0.0 → 1.0.1
+npx clawsouls version bump minor    # 1.0.0 → 1.1.0
+npx clawsouls version bump major    # 1.0.0 → 2.0.0
+npx clawsouls diff                  # colored diff of soul files
+```
+
+### Soul Testing (Phase 9)
+
+```bash
+npx clawsouls test                  # Level 1 (schema) + Level 2 (soulscan)
+npx clawsouls test --level 3       # + Level 3 (behavioral LLM tests)
+```
+
+Level 3 requires `soul.test.yaml` in the soul directory and an LLM provider (OpenAI/Anthropic/Ollama).
+
+### Doctor, Migrate, Search, Info, Update (Phase 10)
+
+```bash
+npx clawsouls doctor                # 12 environment checks
+npx clawsouls migrate               # migrate soul from v0.3 → v0.4 → v0.5
+npx clawsouls search "engineer"     # search souls from registry
+npx clawsouls info TomLeeLive/brad  # show soul metadata
+npx clawsouls update                # update installed soul to latest
+```
 
 ### Validate a Soul
 
@@ -193,5 +234,5 @@ GitHub: https://github.com/clawsouls/soul-spec-mcp
 - Website available in 5 languages: English, Korean, Japanese, Chinese, Spanish (e.g., `clawsouls.ai/ko/souls/...`)
 - Share any soul to your OpenClaw bot: the install command is included in the share text
 - **The Soul Thesis** — Read the manifesto: https://clawsouls.ai/en/manifesto
-- **Research paper** — "Soul-Driven Interaction Design": https://doi.org/10.5281/zenodo.18678616
+- **Research paper** — "Soul-Driven Interaction Design": https://doi.org/10.5281/zenodo.18772585
 - Legal: [Privacy Policy](https://clawsouls.ai/en/privacy) · [Terms of Service](https://clawsouls.ai/en/terms)
