@@ -93,22 +93,7 @@ npx clawsouls export system-prompt       # generate a system prompt string
 
 Combines SOUL.md, IDENTITY.md, AGENTS.md, HEARTBEAT.md, STYLE.md into a single file. Useful for Claude Code, Cursor, Windsurf, and other tools that use a single config file.
 
-### Memory Sync (Pro/Team only)
-
-> ⚡ Requires Pro ($9/mo) or Team ($29/seat/mo) plan.
-
-```bash
-npx clawsouls sync init          # setup GitHub repo + age encryption key
-npx clawsouls sync push          # encrypt & push workspace .md files
-npx clawsouls sync pull          # pull & decrypt from GitHub
-npx clawsouls sync status        # show sync status
-npx clawsouls sync export-key    # export age private key
-npx clawsouls sync import-key    # import age private key
-```
-
-Encrypts workspace memory files (MEMORY.md, memory/*.md) with age encryption and syncs to a private GitHub repo. End-to-end encrypted — even GitHub can't read the contents.
-
-### Version Management (Phase 8)
+### Version Management
 
 ```bash
 npx clawsouls version bump patch    # 1.0.0 → 1.0.1
