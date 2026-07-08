@@ -1,6 +1,7 @@
 ---
 name: clawsouls
-description: Manage AI agent personas (Souls) for OpenClaw. Use when the user wants to install, switch, list, or restore AI personalities/personas. Triggers on requests like "install a soul", "switch persona", "change personality", "list souls", "restore my old soul", "use minimalist", "browse personas", "what souls are available", "publish a soul", or "login to clawsouls".
+version: 0.6.4
+description: Manage AI agent personas (Souls) for OpenClaw. Installs/switches/restores persona files in the agent workspace, searches and publishes to the clawsouls.ai registry (network + token auth), optionally syncs encrypted agent memory via Git (explicit `sync`/`swarm` commands only), and detects the local agent platform. Use only when the user explicitly asks to manage personas — e.g. "install a soul", "switch persona to X", "list souls", "restore my previous soul", "publish my soul", or "login to clawsouls". Workspace-modifying and publishing actions should be confirmed with the user first.
 ---
 
 # ClawSouls — AI Persona Manager
@@ -23,7 +24,7 @@ If not installed, install globally:
 npm install -g clawsouls
 ```
 
-Current version: **v0.6.2**
+Current version: **v0.6.4**
 
 ## Commands
 
@@ -243,6 +244,24 @@ Or add to Claude Desktop config (`claude_desktop_config.json`):
 6 tools: `search_souls`, `get_soul`, `install_soul`, `preview_soul`, `list_categories`, `apply_persona`
 
 GitHub: https://github.com/clawsouls/soul-spec-mcp
+
+## Security & Privacy Disclosure
+
+Full transparency on what this skill can touch — review before use in workspaces containing sensitive prompts, memories, or client data.
+
+**What this skill does:**
+- **Local file changes**: `use`/`restore`/`checkpoint` replace persona files (SOUL.md, IDENTITY.md, AGENTS.md, HEARTBEAT.md, STYLE.md) in the agent workspace. An automatic backup is created before every `use`. USER.md, MEMORY.md, TOOLS.md are never overwritten.
+- **Network calls**: `install`/`search`/`info`/`update` talk to the clawsouls.ai registry. `publish` uploads your soul directory to a public registry.
+- **Memory sync (opt-in only)**: `sync`/`swarm` move agent memory to/from a Git remote you configure, encrypted locally with `age` before leaving the machine. These commands never run implicitly — only on explicit user request.
+- **Platform detection**: `platform`/`detect` inspect the local environment to find the agent workspace path. Nothing is transmitted.
+- **Token handling**: `publish` uses `CLAWSOULS_TOKEN` (env var). Never echo it, commit it, or leave it in shell history.
+
+**Ask the user before:**
+- `use` — switching personas rewrites workspace identity files (routine requests like "change personality" should be confirmed once before files change)
+- `publish` — uploads content publicly; list the files being uploaded first
+- `sync`/`swarm` — pushes (encrypted) memory to a remote
+
+**Safety recommendations:** keep backups enabled (default), use `soulscan` to verify soul integrity after installs, and only install souls from owners you trust.
 
 ## Important Notes
 
