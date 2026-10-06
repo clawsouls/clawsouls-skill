@@ -27,7 +27,7 @@ Then invoke it as `/clawsouls` or just ask: *"install a soul"*.
 ## Using souls in a Hermes workspace
 
 1. `cd` into the Hermes workspace (the directory containing `SOUL.md` / `AGENTS.md`).
-2. Run the usual commands — `npx clawsouls install <owner/name>`, `npx clawsouls use <owner/name>`.
+2. Run the usual commands — `npx clawsouls@0.16.1 install <owner/name>`, `npx clawsouls@0.16.1 use <owner/name>`.
    The CLI writes persona files (`SOUL.md`, `IDENTITY.md`, `AGENTS.md`, `HEARTBEAT.md`,
    `STYLE.md`) into the current workspace and backs up what was there.
 3. `MEMORY.md` and `USER.md` are never overwritten — your Hermes memories survive
@@ -35,7 +35,7 @@ Then invoke it as `/clawsouls` or just ask: *"install a soul"*.
 4. Restart the Hermes session and start a new chat so the previous persona's
    conversation context doesn't linger.
 
-`npx clawsouls soulscan` works the same way — point it at the Hermes workspace to
+`npx clawsouls@0.16.1 soulscan` works the same way — point it at the Hermes workspace to
 verify persona integrity and scan for the 53 safety patterns after any install.
 
 ## Status / roadmap
