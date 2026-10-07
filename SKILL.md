@@ -1,6 +1,6 @@
 ---
 name: clawsouls
-version: 0.6.7
+version: 0.6.8
 description: Manage AI agent personas (Souls) for OpenClaw, Hermes Agent, ZeroClaw, and other agents that use Soul Spec workspace files (SOUL.md, IDENTITY.md, AGENTS.md). Installs/switches/restores persona files in the agent workspace, searches and publishes to the clawsouls.ai registry (network + token auth), optionally syncs encrypted agent memory via Git (explicit `sync`/`swarm` commands only), and detects the local agent platform. Use only when the user explicitly asks to manage personas — e.g. "install a soul", "switch persona to X", "list souls", "restore my previous soul", "publish my soul", or "login to clawsouls". Workspace-modifying and publishing actions should be confirmed with the user first.
 ---
 
@@ -26,7 +26,7 @@ If not installed, install globally:
 npm install -g clawsouls
 ```
 
-Current version: **v0.6.7**
+Current version: **v0.6.8**
 
 ## Commands
 
@@ -250,7 +250,7 @@ npx -y soul-spec-mcp@0.6.0
 Or add to Claude Desktop config (`claude_desktop_config.json`):
 
 ```json
-{ "mcpServers": { "soul-spec": { "command": "npx", "args": ["-y", "soul-spec-mcp"] } } }
+{ "mcpServers": { "soul-spec": { "command": "npx", "args": ["-y", "soul-spec-mcp@0.6.0"] } } }
 ```
 
 6 tools: `search_souls`, `get_soul`, `install_soul`, `preview_soul`, `list_categories`, `apply_persona`
